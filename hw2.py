@@ -13,6 +13,10 @@ def create_rectangle(p1: Point, p2: Point) -> Rectangle:
     return Rectangle(top_left, bottom_right)
 
 # Part 2
+    def shorter_duration_than(d1: Duration, d2: Duration) -> bool:
+    total_seconds_d1 = d1.minutes * 60 + d1.seconds
+    total_seconds_d2 = d2.minutes * 60 + d2.seconds
+    return total_seconds_d1 < total_seconds_d2
 
 
 # Part 3
