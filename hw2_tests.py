@@ -74,6 +74,9 @@ print(validate_route(city_links, route))
 
     # Part 6
 
+print(longest_repetition([1, 1, 2, 2, 1, 1, 1, 3]))  
+print(longest_repetition([3, 3, 3, 2, 2, 2, 2, 3, 3]))  
+print(longest_repetition([]))  
 
 
 
