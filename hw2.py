@@ -55,3 +55,30 @@ def validate_route(city_links: list[list[str]], route: list[str]) -> bool:
 
 
 # Part 6
+from typing import List, Optional
+
+def longest_repetition(numbers: List[int]) -> Optional[int]:
+    if not numbers:
+        return None
+    
+    max_length = 1
+    max_start_index = 0
+    current_length = 1
+    current_start_index = 0
+
+    for i in range(1, len(numbers)):
+        if numbers[i] == numbers[i - 1]:
+            current_length += 1
+        else:
+            if current_length > max_length:
+                max_length = current_length
+                max_start_index = current_start_index
+            current_length = 1
+            current_start_index = i
+
+   
+    if current_length > max_length:
+        max_length = current_length
+        max_start_index = current_start_index
+
+    return max_start_index
