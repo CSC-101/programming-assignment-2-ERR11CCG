@@ -20,6 +20,12 @@ def create_rectangle(p1: Point, p2: Point) -> Rectangle:
 
 
 # Part 3
+def songs_shorter_than(songs: list[Song], max_duration: Duration) -> list[Song]:
+    shorter_songs = []
+    for song in songs:
+        if shorter_duration_than(song.duration, max_duration):
+            shorter_songs.append(song)
+    return shorter_songs
 
 
 # Part 4
