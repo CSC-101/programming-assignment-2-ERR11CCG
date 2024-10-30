@@ -29,6 +29,18 @@ def songs_shorter_than(songs: list[Song], max_duration: Duration) -> list[Song]:
 
 
 # Part 4
+def running_time(songs: list[Song], playlist: list[int]) -> Duration:
+    total_minutes = 0
+    total_seconds = 0
+    for song_index in playlist:
+        if 0 <= song_index < len(songs):
+            song_duration = songs[song_index].duration
+            total_minutes += song_duration.minutes
+            total_seconds += song_duration.seconds
+    total_minutes += total_seconds // 60
+    total_seconds = total_seconds % 60
+
+    return Duration(total_minutes, total_seconds)
 
 
 # Part 5
