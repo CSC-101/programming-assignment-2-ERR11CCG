@@ -58,6 +58,19 @@ print(total_duration)
 
     # Part 5
 
+city_links = [
+    ['san luis obispo', 'santa margarita'],
+    ['san luis obispo', 'pismo beach'],
+    ['atascadero', 'santa margarita'],
+    ['atascadero', 'creston']
+]
+route = ['san luis obispo', 'santa margarita', 'atascadero']
+print(validate_route(city_links, route))  
+
+
+route = ['san luis obispo', 'atascadero']
+print(validate_route(city_links, route))  
+
 
     # Part 6
 
