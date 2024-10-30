@@ -44,6 +44,14 @@ def running_time(songs: list[Song], playlist: list[int]) -> Duration:
 
 
 # Part 5
+def validate_route(city_links: list[list[str]], route: list[str]) -> bool:
+    for i in range(len(route) - 1):
+        city1, city2 = route[i], route[i + 1]
+        
+        if [city1, city2] not in city_links and [city2, city1] not in city_links:
+            return False
+    
+    return True
 
 
 # Part 6
