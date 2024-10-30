@@ -4,7 +4,8 @@ import unittest
 
 
 # Write your test cases for each part below.
-
+#Part 1 
+ 
 class TestCases(unittest.TestCase):
 p1 = Point(2, 2)
 p2 = Point(10, 10)
@@ -15,9 +16,6 @@ p1 = Point(3, 5)
 p2 = Point(8, 5)
 rectangle = create_rectangle(p1, p2)
 print(rectangle)
-
-
-
 
     # Part 2
 
